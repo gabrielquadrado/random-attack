@@ -1,0 +1,211 @@
+@font-face{
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Lato Light'), local('Lato-Light'), url('../fonts/Lato-Light.ttf') format('truetype');
+}
+/* latin-ext */
+@font-face{
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Lato Regular'), local('Lato-Regular'), url('../fonts/Lato-Regular.ttf') format('truetype');
+}
+/* latin-ext */
+@font-face{
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Lato Black'), local('Lato-Black'), url('../fonts/Lato-Black.ttf') format('truetype');
+}
+html, body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #F4F4F4;
+	color: #777;
+	font-family: Lato, 'Open Sans', Helvetica, sans-serif !important;
+}
+div.text-error{
+	position: absolute;
+	top: 40%;
+	transform: translateY(-40%);
+	font-size: 20px;
+}
+div.text-error h1{
+	font-size: 210px;
+}
+div.game-container{
+	height: 100vh;
+	position: relative;
+	background: black;
+}
+div.initial-screen, div.winner-screen{
+	position:  relative;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+	text-align: center;
+	padding: 0;
+}
+div.initial-screen h4.title{
+	font-size: 3.8vw;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+div.initial-screen form input{
+	text-align: center;
+	background: transparent;
+	color: white;
+}
+div.initial-screen form div{
+	position: absolute;
+	padding:  0;
+	width:  100%;
+	text-align:  center;
+	margin-top: 10px;
+	animation: none;
+}
+div.initial-screen .tutorial-container{
+	position: absolute;
+    top: 103%;
+}
+div.initial-screen .tutorial-container div:last-child{
+	margin-top: 10px;
+}
+div.initial-screen form button:hover,
+div.winner-screen button:hover{
+	animation: shake .5s infinite;
+	background-color: #c32525;
+	border-color: #c32525;
+	font-weight: bold;
+	color: white;
+}
+div.initial-screen form input:focus{
+	border-color: inherit;
+}
+div.game-screen{
+	height: 100%;
+}
+div.bar-container{
+	padding: 0;
+	height: 60px;
+	width: 100%;
+	font-size: 17px;
+	font-weight: bold;
+	background: #ffaeae;
+}
+div.bar-container.top{
+	position: absolute;
+	top: 0;
+}
+div.bar-container.bottom{
+	position: absolute;
+	bottom: 0;
+}
+div.bar-container div.percent{
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	background: #ea4c4c;
+}
+div.bar-container div.percent span{
+	text-align: center;
+}
+div.bar-container span.name{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	font-size: 50px;
+	line-height: 60px;
+	color: #00000026;
+	z-index: 3;
+}
+div.bar-container span.percent-text{
+	position: relative;
+	font-size: 20px;
+	line-height: 60px;
+	color: white;
+	z-index: 4;
+}
+div.center-container{
+	position: absolute;
+	margin: 0 auto;
+	width:  100%;
+	top: 45%;
+	transform: translateY(-45%);
+	animation: fadeIn 3s;
+	text-align: center;
+}
+div.center-container button, div.center-container button:focus{
+	background-color: transparent;
+	border: inherit;
+	color: #ffffffc7;
+	margin-top: 20px;
+}
+.red-button{
+  border-radius: 50%;
+  cursor: pointer;
+  font: inherit;
+  height: 100%;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.red-button:before{
+  background: linear-gradient(to bottom,  
+    rgba(255,255,255,0.14) 0%, 
+    rgba(255,255,255,0) 50%, 
+    rgba(255,255,255,0) 100%);
+  border-radius: 50%;
+  content: " ";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.red-button:active{
+  box-shadow: 0 0 .5em rgba(0,0,0,1),       inset 0 .1em .3em rgba(0,0,0,.5),       inset 0 -.1em .3em rgba(0,0,0,.5);
+}
+.red-button:active:before{
+  top: 3.5%;
+}
+.button-frame{
+  background: #cc0000;
+  border-radius: 50%;
+  box-shadow: 0 0 0.9em rgba(0,0,0,.9), inset 0 0.25em 0.1em rgba(255,255,255,.3), inset 0 -0.25em 0.125em rgba(0,0,0,.3);
+  display: block;
+  height: 10.8em;
+  margin: 0 auto;
+  padding: .55em;
+  position: relative;
+  width: 10.8em;
+  z-index: 20;
+}
+.plastic{
+  background: linear-gradient(to bottom,  #b01e1e 0%,#920f0f 100%);
+}
+h4.current{
+	font-size: 50px;
+	display:  block;
+	text-align: center;
+	width:  100%;
+	color: white;
+	margin:  25px 0;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+div.winner-screen h4{
+	font-size: 3.7vw;
+	text-align:  center;
+	word-break:  break-word;
+}
+div.winner-screen p{
+	font-size: 1.3vw;
+}

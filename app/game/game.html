@@ -1,0 +1,48 @@
+<div class="game-container">
+	<div class="clearfix"></div>
+	<div class="initial-screen col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2 animated fadeIn" ng-show="step == 1">
+		<h4 class="title animated fadeInDown">RANDOM ATTACK</h4>
+		<form class="form-group animated fadeInUp" ng-submit="init()">
+			<input type="text" class="form-control" name="player1" ng-model="player1.name" placeholder="Player 1" required="true">
+			<input type="text" class="form-control" name="player2" ng-model="player2.name" placeholder="Player 2" required="true">
+			<button type="submit" class="btn btn-block btn-default">Jogar</button>
+			<div class="col-md-12" ng-init="showTutorial = false" ng-click="showTutorial = !showTutorial" ng-show="showTutorial == false">
+				TUTORIAL
+			</div>
+		</form>
+		<div class="tutorial-container animated fadeIn" ng-show="showTutorial">
+			<div class="col-md-12 item-1 animated fadeInDown">Intercale sua jogada com o segundo player</div>
+			<div class="col-md-12 item-2 animated fadeInDown">O player exibido no clique receberá dano</div>
+			<div class="col-md-12 item-3 animated fadeInDown">Divirta-se com esse super-magnífico jogo</div>
+			<div class="col-md-12 animated fadeInDown" ng-click="showTutorial = false">
+				<strong>FECHAR</strong>
+			</div>
+		</div>
+	</div>
+	<div class="game-screen animated fadeIn" ng-show="step == 2">
+		<div class="bar-container top text-center animated fadeInDown">
+			<div class="percent" ng-style="player1.lifeBarPercent">
+				<span class="name">{{player1.name}}</span>
+				<span class="percent-text">{{ player1.life }}%</span>
+			</div>
+		</div>
+		<div class="bar-container bottom text-center animated fadeInUp">
+			<div class="percent" ng-style="player2.lifeBarPercent">
+				<span class="name">{{player2.name}}</span>
+				<span class="percent-text">{{ player2.life }}%</span>
+			</div>
+		</div>
+		<div class="center-container">
+			<h4 class="current">{{ current.name }}</h4>
+			<div class="button-frame plastic">
+			  <div class="red-button plastic" ng-click="attack(current.id)"></div>
+			</div>
+			<button class="btn btn-default" ng-click="resetPlayers()">Reniciar</button>
+		</div>
+	</div>
+	<div class="winner-screen col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2 animated fadeIn" ng-show="step == 3">
+		<h4 class="animated fadeInDown">Parabéns {{ winner.name }}!</h4>
+		<p class="animated fadeInUp">Você é o vencedor desse incrível jogo.</p>
+		<div class="animated fadeInUp"><button type="button" class="btn btn-block btn-default" ng-click="init()">Valeu!</button></div>
+	</div>
+</div>
