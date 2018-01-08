@@ -13,5 +13,6 @@ $ bower install
 
 **Comentários:**
 
- - A aplicação está otimizada e totalmente funcional para navegadores de dispositivos móveis;
- - Embora seja uma aplicação simples, escolhi usar Angular com Angular Route para possíveis incrementos e prover escalabilidade ao game.
+ - A aplicação também está otimizada e totalmente funcional para navegadores de dispositivos móveis;
+ - Embora seja uma aplicação simples, escolhi usar Angular 1 com Angular Route para possíveis incrementos e prover escalabilidade ao game;
+ - O jogo pode ser acessado em: https://random-attack.herokuapp.com

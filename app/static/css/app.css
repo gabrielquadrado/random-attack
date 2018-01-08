@@ -66,6 +66,7 @@ div.initial-screen form div{
 	text-align:  center;
 	margin-top: 10px;
 	animation: none;
+	cursor:  pointer;
 }
 div.initial-screen .tutorial-container{
 	position: absolute;
@@ -73,6 +74,7 @@ div.initial-screen .tutorial-container{
 }
 div.initial-screen .tutorial-container div:last-child{
 	margin-top: 10px;
+	cursor: pointer;
 }
 div.initial-screen form button:hover,
 div.winner-screen button:hover{
@@ -202,10 +204,10 @@ h4.current{
             user-select: none;
 }
 div.winner-screen h4{
-	font-size: 3.7vw;
+	font-size: 4vw;
 	text-align:  center;
 	word-break:  break-word;
 }
 div.winner-screen p{
-	font-size: 1.3vw;
+	font-size: 2vw;
 }

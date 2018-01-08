@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    angular.module('game').controller('gameCtrl', loginCtrl);
+    angular.module('game').controller('gameCtrl', gameCtrl);
 
-    function loginCtrl(PLAYER, $scope, $log, $rootScope) {
+    function gameCtrl(PLAYER, $scope, $log, $rootScope) {
         $scope.step = 1;
 
         $scope.init = () => {
